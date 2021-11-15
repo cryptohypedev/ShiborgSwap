@@ -50,7 +50,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   {
     label: t('NTF Market'),
     icon: 'NftIcon',
-    href: '/collectibles',
+    href: '/',
     status:  {text: "SOON", color: "warning"}    
   },
   // {
@@ -79,7 +79,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   {
     label: t('Info'),
     icon: 'InfoIcon',
-    href: 'https://pancakeswap.info',
+    href: 'https://shiborgtoken.com/',
   },
   // {
   //   label: t('IFO'),
@@ -91,8 +91,8 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     icon: 'MoreIcon',
     items: [
       {
-        label: t('Contact'),
-        href: 'https://docs.pancakeswap.finance/contact-us',
+        label: t('Audit Report'),
+        href: 'https://github.com/solidproof/smart-contract-audits/blob/main/SmartContract_Audit_Solidproof_ShiborgInu.pdf',
       },
       // {
       //   label: t('Voting'),

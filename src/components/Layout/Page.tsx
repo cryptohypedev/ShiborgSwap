@@ -4,7 +4,8 @@ import { useTranslation } from 'contexts/Localization'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router'
 import { DEFAULT_META, getCustomMeta } from 'config/constants/meta'
-import { usePriceCakeBusd } from 'state/farms/hooks'
+// import { usePriceCakeBusd } from 'state/farms/hooks'
+import { useGetPriceData } from 'hooks/GetTokenPriceFromPancakeswap'
 import Container from './Container'
 
 const StyledPage = styled(Container)`
@@ -26,12 +27,11 @@ const StyledPage = styled(Container)`
 const PageMeta = () => {
   const { t } = useTranslation()
   const { pathname } = useLocation()
-  const cakePriceUsd = usePriceCakeBusd()
-  const cakePriceUsdDisplay = cakePriceUsd.gt(0)
-    ? `$${cakePriceUsd.toNumber().toLocaleString(undefined, {
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3,
-      })}`
+  // const cakePriceUsd = usePriceCakeBusd()
+  const priceData = useGetPriceData()
+  const cakePriceUsd = priceData ? Number(priceData.data.price).toFixed(11) : undefined
+  const cakePriceUsdDisplay = cakePriceUsd
+    ? `$${cakePriceUsd?.toLocaleString()}`
     : ''
 
   const pageMeta = getCustomMeta(pathname, t) || {}

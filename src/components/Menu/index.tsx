@@ -3,17 +3,22 @@ import { Menu as UikitMenu } from '@pancakeswap/uikit'
 import { languageList } from 'config/localization/languages'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
-import { usePriceCakeBusd } from 'state/farms/hooks'
+// import { usePriceCakeBusd } from 'state/farms/hooks'
 import { useProfile } from 'state/profile/hooks'
+import { useGetPriceData } from 'hooks/GetTokenPriceFromPancakeswap'
 import config from './config'
 import UserMenu from './UserMenu'
 import GlobalSettings from './GlobalSettings'
 
+
 const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
-  const cakePriceUsd = usePriceCakeBusd()
+  // const cakePriceUsd = usePriceCakeBusd()
+  const priceData = useGetPriceData()
   const { profile } = useProfile()
   const { currentLanguage, setLanguage, t } = useTranslation()
+
+  const cakePriceUsd = priceData ? Number(priceData.data.price) : undefined
 
   return (
     <UikitMenu
@@ -24,7 +29,8 @@ const Menu = (props) => {
       currentLang={currentLanguage.code}
       langs={languageList}
       setLang={setLanguage}
-      cakePriceUsd={cakePriceUsd.toNumber()}
+      // cakePriceUsd={cakePriceUsd.toNumber()}
+      cakePriceUsd={cakePriceUsd}
       links={config(t)}
       profile={{
         username: profile?.username,

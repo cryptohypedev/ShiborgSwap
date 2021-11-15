@@ -1,5 +1,6 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
+/* eslint-disable */
 import {
   Flex,
   LogoutIcon,
@@ -28,7 +29,7 @@ const UserMenu = () => {
   const hasProfile = isInitialized && !!profile
   const avatarSrc = profile && profile.nft ? `/images/nfts/${profile.nft.images.sm}` : undefined
   const hasLowBnbBalance = fetchStatus === FetchStatus.SUCCESS && balance.lte(LOW_BNB_BALANCE)
-
+/* eslint-enable */
   if (!account) {
     return <ConnectWalletButton scale="sm" />
   }
