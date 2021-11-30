@@ -5,12 +5,12 @@ export const swapSectionData: SalesSectionProps = {
   bodyText: 'Trade any token on Binance Smart Chain in seconds, just by connecting your wallet.',
   reverse: false,
   primaryButton: {
-    to: '/swap',
+    to: '/swap?outputCurrency=0x389c13d5be24bed2af35c30f211e042225cb06ff',
     text: 'Trade Now',
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://shiborgtoken.com/',
     text: 'Learn',
     external: true,
   },
@@ -26,7 +26,7 @@ export const swapSectionData: SalesSectionProps = {
 
 export const earnSectionData: SalesSectionProps = {
   headingText: 'Earn passive income with crypto.',
-  bodyText: 'PancakeSwap makes it easy to make your crypto work for you.',
+  bodyText: 'ShiborgSwap makes it easy to make your crypto work for you.',
   reverse: true,
   primaryButton: {
     to: '/farms',
@@ -49,17 +49,17 @@ export const earnSectionData: SalesSectionProps = {
 }
 
 export const cakeSectionData: SalesSectionProps = {
-  headingText: 'CAKE makes our world go round.',
+  headingText: 'With Shiborg there´s no limit.',
   bodyText:
-    'CAKE token is at the heart of the PancakeSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'A Cyborg Shiba Inu Dog From Planet Shibamoon X1000.',
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    text: 'Buy CAKE',
+    to: '/swap?outputCurrency=0x389c13d5be24bed2af35c30f211e042225cb06ff',
+    text: 'Buy Shiborg',
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
+    to: 'https://shiborgtoken.com/',
     text: 'Learn',
     external: true,
   },
@@ -67,10 +67,9 @@ export const cakeSectionData: SalesSectionProps = {
   images: {
     path: '/images/home/cake/',
     attributes: [
-      { src: 'bottom-right', alt: 'Small 3d pancake' },
-      { src: 'top-right', alt: 'Small 3d pancake' },
-      { src: 'coin', alt: 'CAKE token' },
-      { src: 'top-left', alt: 'Small 3d pancake' },
+      { src: 'token', alt: 'SHIBORG token' },
     ],
+    maxHeight: '290px',
   },
 }
+

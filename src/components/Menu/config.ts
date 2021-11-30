@@ -13,7 +13,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: t('Exchange'),
-        href: '/swap',
+        href: '/swap?outputCurrency=0x389c13d5be24bed2af35c30f211e042225cb06ff',
         status:  {text: "LIVE", color: "primary"}
       },
       // {
@@ -48,7 +48,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   //   href: '/lottery',
   // },
   {
-    label: t('NTF Market'),
+    label: t('NFT Market'),
     icon: 'NftIcon',
     href: '/',
     status:  {text: "SOON", color: "warning"}    

@@ -18,7 +18,7 @@ const NotFound = () => {
   return (
     <Page>
       <StyledNotFound>
-        <LogoRoundIcon width="64px" mb="8px" />
+        <LogoRoundIcon width="132px" mb="8px" />
         <Heading scale="xxl">404</Heading>
         <Text mb="16px">{t('Oops, page not found.')}</Text>
         <Button as="a" href="/" scale="sm">

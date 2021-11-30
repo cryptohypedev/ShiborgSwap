@@ -1,8 +1,8 @@
 {
-  "short_name": "PancakeSwap",
-  "name": "PancakeSwap",
-  "description": "Farm CAKE with Pancake LP Tokens",
-  "homepage_url": "https://pancakeswap.finance",
+  "short_name": "ShiborgSwap",
+  "name": "ShiborgSwap",
+  "description": "Farm Shiborg with ShiborgSwap LP Tokens",
+  "homepage_url": "http://ec2-3-133-1-110.us-east-2.compute.amazonaws.com",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",

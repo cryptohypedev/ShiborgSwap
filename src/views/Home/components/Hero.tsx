@@ -75,7 +75,7 @@ const StarsWrapper = styled.div`
 `
 
 const imagePath = '/images/home/lunar-bunny/'
-const imageSrc = 'bunny'
+const imageSrc = 'shiborgmoon'
 
 const starsImage: CompositeImageProps = {
   path: '/images/home/lunar-bunny/',
@@ -84,6 +84,7 @@ const starsImage: CompositeImageProps = {
     { src: 'star-r', alt: '3D Star' },
     { src: 'star-top-r', alt: '3D Star' },
   ],
+  maxHeight:'312px',
 }
 
 const Hero = () => {
@@ -104,14 +105,14 @@ const Hero = () => {
       >
         <Flex flex="1" flexDirection="column">
           <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+            {t('A decentralized meme token.')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t('ShiborgSwap, our own decentralized platform')}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
-            <Link mr="16px" href="/swap">
+            <Link mr="16px" href="/swap?outputCurrency=0x389c13d5be24bed2af35c30f211e042225cb06ff">
               <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
             </Link>
           </Flex>
@@ -124,7 +125,7 @@ const Hero = () => {
           position="relative"
         >
           <BunnyWrapper>
-            <img src={`${imagePath}${imageSrc}.png`} srcSet={getSrcSet(imagePath, imageSrc)} alt={t('Lunar bunny')} />
+            <img src={`${imagePath}${imageSrc}.png`} srcSet={getSrcSet(imagePath, imageSrc)} width={431} height={284} alt={t('Lunar bunny')} />
           </BunnyWrapper>
           <StarsWrapper>
             <CompositeImage {...starsImage} />

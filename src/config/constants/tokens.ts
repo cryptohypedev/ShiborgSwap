@@ -1855,6 +1855,15 @@ const tokens = {
     decimals: 9,
     projectLink: 'https://safemoon.net/',
   },
+  shiborg: {
+    symbol: 'SHIBORG',
+    address: {
+      56: '0x389c13d5be24bED2af35C30F211E042225CB06fF',
+      97: '',
+    },
+    decimals: 9,
+    projectLink: 'https://shiborgtoken.com/',
+  },
   axs: {
     symbol: 'AXS',
     address: {

@@ -38,7 +38,7 @@ const Footer = () => {
   const { t } = useTranslation()
   return (
     <Wrapper>
-      <Flex flexDirection={['column', 'column', 'row']} alignItems="center">
+      {/* <Flex flexDirection={['column', 'column', 'row']} alignItems="center">
         <ButtonMenu variant="subtle" scale="sm" activeIndex={0}>
           <ButtonMenuItem>V2</ButtonMenuItem>
           <ButtonMenuItem as="a" href="https://v1exchange.pancakeswap.finance/#/">
@@ -53,8 +53,8 @@ const Footer = () => {
         >
           {t('Convert ERC-20 to BEP-20')}
         </LinkExternal>
-      </Flex>
-      <Flex
+      </Flex> */}
+      {/* <Flex
         flexGrow={1}
         alignItems="center"
         width={['100%', '100%', '100%', 'auto']}
@@ -65,7 +65,7 @@ const Footer = () => {
             id="clickExchangeHelp"
             as="a"
             external
-            href="https://docs.pancakeswap.finance/products/pancakeswap-exchange"
+            href="mailto:contact@shiborgtoken.com"
             variant="subtle"
           >
             {t('Need help ?')}
@@ -75,7 +75,7 @@ const Footer = () => {
           </Svg>
         </BubbleWrapper>
         <Image src="/images/help.svg" alt="Get some help" width={160} height={108} />
-      </Flex>
+      </Flex> */}
     </Wrapper>
   )
 }

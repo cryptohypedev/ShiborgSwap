@@ -100,15 +100,15 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Flex alignItems="center">
-            <Text>{t('Flippy sounds')}</Text>
+            <Text>{t('sounds')}</Text>
             <QuestionHelper
-              text={t('Fun sounds to make a truly immersive pancake-flipping trading experience')}
+              text={t('Shiborg sounds')}
               placement="top-start"
               ml="4px"
             />
           </Flex>
           <PancakeToggleWrapper>
-            <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
+            <Toggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
           </PancakeToggleWrapper>
         </Flex>
       </Flex>

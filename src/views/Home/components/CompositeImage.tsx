@@ -68,6 +68,7 @@ interface ImageAttributes {
 export interface CompositeImageProps {
   path: string
   attributes: ImageAttributes[]
+  maxHeight?: string
 }
 
 interface ComponentProps extends CompositeImageProps {

@@ -64,7 +64,7 @@ const Home: React.FC = () => {
         )}
         <Hero />
       </StyledHeroSection>
-      <PageSection
+      {/* <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         background={
           theme.isDark
@@ -75,8 +75,8 @@ const Home: React.FC = () => {
         hasCurvedDivider={false}
       >
         <MetricsSection />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
         index={2}
@@ -88,8 +88,8 @@ const Home: React.FC = () => {
           </InnerWedgeWrapper>
         </OuterWedgeWrapper>
         <SalesSection {...swapSectionData} />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.gradients.cardHeader}
         index={2}
@@ -102,8 +102,8 @@ const Home: React.FC = () => {
         </OuterWedgeWrapper>
         <SalesSection {...earnSectionData} />
         <FarmsPoolsRow />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={
           theme.isDark
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
         hasCurvedDivider={false}
       >
         <WinSection />
-      </PageSection>
+      </PageSection> */}
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
@@ -122,11 +122,15 @@ const Home: React.FC = () => {
         hasCurvedDivider={false}
       >
         <SalesSection {...cakeSectionData} />
-        <CakeDataRow />
+        {/* <CakeDataRow /> */}
       </PageSection>
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
-        background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
+        background={
+          theme.isDark
+          ? 'radial-gradient(103.12% 50% at 50% 50%, #21193A 0%, #191326 100%)'
+          : 'linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)'
+        }
         index={2}
         hasCurvedDivider={false}
       >

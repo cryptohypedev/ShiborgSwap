@@ -16,7 +16,6 @@ const BgWrapper = styled.div`
   top: 0px;
   left: 0px;
 `
-
 const StyledSunburst = styled(SunburstSvg)`
   height: 350%;
   width: 350%;
@@ -66,18 +65,14 @@ const BottomRightImgWrapper = styled(Flex)`
 const topLeftImage = {
   path: '/images/home/flying-pancakes/',
   attributes: [
-    { src: '1-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '1-left', alt: 'Pancake flying on the left' },
-    { src: '1-top', alt: 'Pancake flying on the top' },
+    { src: 'token_left', alt: 'Shiborg flying on the left' },    
   ],
 }
 
 const bottomRightImage = {
   path: '/images/home/flying-pancakes/',
   attributes: [
-    { src: '2-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '2-top', alt: 'Pancake flying on the top' },
-    { src: '2-right', alt: 'Pancake flying on the right' },
+    { src: 'token_right', alt: 'Shiborg flying on the right' },    
   ],
 }
 
@@ -94,26 +89,26 @@ const Footer = () => {
       </BgWrapper>
       <FloatingPancakesWrapper>
         <TopLeftImgWrapper>
-          <CompositeImage {...topLeftImage} maxHeight="256px" />
+          <CompositeImage {...topLeftImage} maxHeight="206px" />
         </TopLeftImgWrapper>
         <BottomRightImgWrapper>
-          <CompositeImage {...bottomRightImage} maxHeight="256px" />
+          <CompositeImage {...bottomRightImage} maxHeight="206px" />
         </BottomRightImgWrapper>
       </FloatingPancakesWrapper>
       <Wrapper>
-        <Heading mb="24px" scale="xl" color="white">
-          {t('Start in seconds.')}
+        <Heading mb="24px" scale="xl" color="secondary">
+          {t('Start now.')}
         </Heading>
-        <Text textAlign="center" color="white">
-          {t('Connect your crypto wallet to start using the app in seconds.')}
+        <Text textAlign="center" color="text">
+          {t('Just connect your crypto wallet.')}
         </Text>
-        <Text mb="24px" bold color="white">
+        {/* <Text mb="24px" bold color="primary">
           {t('No registration needed.')}
-        </Text>
+        </Text> */}
 
-        <Link external href="https://docs.pancakeswap.finance/">
+        {/* <Link external href="https://docs.pancakeswap.finance/">
           {t('Learn how to start')}
-        </Link>
+        </Link> */}
         {!account && <ConnectWalletButton mt="24px" />}
       </Wrapper>
     </>

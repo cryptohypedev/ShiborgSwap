@@ -9,6 +9,7 @@ import SwapWarningTokensConfig from 'config/constants/swapWarningTokens'
 import SafemoonWarning from './SafemoonWarning'
 import BondlyWarning from './BondlyWarning'
 import Acknowledgement from './Acknowledgement'
+import ShiborgWarning from './ShiborgWarning'
 
 const StyledModalContainer = styled(ModalContainer)`
   max-width: 440px;
@@ -54,6 +55,10 @@ const SwapWarningModal: React.FC<SwapWarningModalProps> = ({ swapCurrency, onDis
     [getAddress(SwapWarningTokensConfig.safemoon.address)]: {
       symbol: SwapWarningTokensConfig.safemoon.symbol,
       component: <SafemoonWarning />,
+    },
+    [getAddress(SwapWarningTokensConfig.shiborg.address)]: {
+      symbol: SwapWarningTokensConfig.shiborg.symbol,
+      component: <ShiborgWarning />,
     },
     [getAddress(SwapWarningTokensConfig.bondly.address)]: {
       symbol: SwapWarningTokensConfig.bondly.symbol,
